@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <!-- include needed library  -->
+  <script src="./lib/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="./lib/toastify.js"></script>
+
+  <!-- page Body  -->
+  <body>
+  <header id='shop-header'>
+    <div id="header-logo">
+      <div id='logo'>
+        <a href="index.html" class="standard-logo" data-dark-logo="assets/logo-dark.png">
+          <img src="" alt="Logo"></a>
+      </div>
+    </div>
+  </header>
+
+  <div id="shopCart">
+    <div id='search'>
+      <input type='text' id='searchbox-text' v-model='search' placeholder="Search">
+    </div>
+    <!-- Here Uing reusable component -->
+    <productcart :products="cartData" :pagenumber="currentPage" :searchvalue='search'></productcart>
+
+    <!-- Paginations here -->
+    <div id='pagination-numbers'>
+      Pages:
+      <span id='pages' v-for='number in maxPageNumber()' @click='updateScreenProducts(number)'
+      v-bind:class="{active:isActivePage(number)}">
+        {{number}}
+      </span>
+    </div>
+
+    <!-- Grand total Show here -->
+    <div id='grand-total'>
+        Grand Total: {{cartData.length}}
+    </div>
+  </div>
+  </body>
+
+  <!-- include js file here -->
+	<script type="text/javascript" src="./script/main.js"></script>
+</html>
