@@ -1,6 +1,9 @@
 body {
   margin: 0;
 }
+#logo img {
+  width: 300px;
+}
 #shop-header {
   position: fixed;
   padding: 0px 10px;
@@ -164,6 +167,6 @@ body {
     border-radius: 2px;
     cursor: pointer;
   }
-   
+
   .toastify.on { opacity: 1; }
-  
+
