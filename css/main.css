@@ -1,9 +1,7 @@
 body {
   margin: 0;
 }
-#logo img {
-  width: 300px;
-}
+
 #shop-header {
   position: fixed;
   padding: 0px 10px;
@@ -23,9 +21,14 @@ body {
   position: fixed;
   float: left;
   padding-right: 30px;
+  padding-top: 10px;
   margin-right: 30px;
   border-right: 1px solid #EEE;
   height: 111px;
+}
+
+#logo #logo-image {
+  width: 300px;
 }
 
 #shopCart {
